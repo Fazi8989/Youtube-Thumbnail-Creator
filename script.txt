@@ -1,0 +1,10 @@
+#!/bin/bash
+sleep 2
+rm DIRECTORY/imagename.jpg #ignore if first use.  simply deletes the last one)
+ffmpeg -i $((RANDOM%15779+1)).jpg -vf scale=1280:720 cover.jpg
+echo "cover thumbnail created"
+sleep 2
+mv imagename.jpg DIRECTORY
+echo "moved thumbnail image into correct spot"
+echo "ENTIRE PROCESS COMPLETE"
+sleep 10
